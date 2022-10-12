@@ -1,8 +1,12 @@
 # anki-fen-vis
 
-This is an [Anki](https://apps.ankiweb.net/) plugin to place chess boards in cards with [FEN](https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation) notation. It's tested on Anki version 2.1.54.
+This is an [Anki](https://apps.ankiweb.net/) plugin to place chess boards in cards with [FEN](https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation) notation:
 
-It's a spiritual successor to:
+![](./assets/screenshot0.png)
+
+![](./assets/screenshot1.png)
+
+It's tested on Anki version 2.1.54. It's a spiritual successor to:
 
 | name                                                         | date       | ANKI version |
 | ------------------------------------------------------------ | ---------- | ------------ |
