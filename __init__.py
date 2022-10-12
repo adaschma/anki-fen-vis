@@ -1,5 +1,3 @@
-print('package addon/__init__.py here')
-
 import re
 import sys
 
@@ -28,11 +26,11 @@ def hook(txt, editor):
     return result
 
 if sys.executable.endswith('anki'):
-    print(f'name: {__name__}')
-    print('core.py executing from ANKI gui')
+    print('anki_fen_vis: executing from ANKI gui')
+    from aqt import gui_hooks
     gui_hooks.editor_will_munge_html.append(hook)
 elif sys.executable.endswith('python'):
-    print('core.py executing in command-line')
+    print('anki_fen_vis: executing in command-line')
 else:
-    print('core.py confused')
+    print('anki_fen_vis: executing ???')
 

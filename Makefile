@@ -7,17 +7,17 @@ error:
 	@exit -1
 
 install:
-	@if [ -L "$(INSTALL_DIR)/anki-fen-vis" ]; then \
+	@if [ -L "$(INSTALL_DIR)/anki_fen_vis" ]; then \
 		echo "already installed"; \
 	else \
 		echo "installing"; \
-		ln -s "$(PWD)/addon" "$(INSTALL_DIR)/anki-fen-vis"; \
+		ln -s "$(PWD)" "$(INSTALL_DIR)/anki_fen_vis"; \
 	fi
 
 uninstall:
-	@if [ -L "$(INSTALL_DIR)/anki-fen-vis" ]; then \
+	@if [ -L "$(INSTALL_DIR)/anki_fen_vis" ]; then \
 		echo "uninstalling"; \
-		rm "$(INSTALL_DIR)/anki-fen-vis"; \
+		rm "$(INSTALL_DIR)/anki_fen_vis"; \
 	else \
 		echo "not installed"; \
 	fi
