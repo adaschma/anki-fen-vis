@@ -16,7 +16,7 @@ def fen2svg(m):
     fen = m.group(1)
     board = chess.Board()
     board.set_fen(fen)
-    svg = chess.svg.board(board)
+    svg = chess.svg.board(board, orientation=board.turn, size=320, coordinates=False)
     return svg
 
 def hook(txt, editor):
