@@ -23,10 +23,10 @@ from __future__ import annotations
 import math
 import xml.etree.ElementTree as ET
 
-import anki_fen_vis.chess as chess
-
 from typing import Dict, Iterable, Optional, Tuple, Union
-from anki_fen_vis.chess import Color, IntoSquareSet, Square
+
+from .. import chess
+from . import Color, IntoSquareSet, Square
 
 
 SQUARE_SIZE = 45
