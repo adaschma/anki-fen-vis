@@ -45,3 +45,5 @@ Good documentation:
 * https://addon-docs.ankiweb.net/addon-config.html
 * https://addon-docs.ankiweb.net/sharing.html (how to package for distribution)
 * https://docs.ankiweb.net/misc.html#debug-console
+
+To make a new version, see Make target `share`. To upload it, log into https://ankiweb.net then click "Decks" then scroll to the bottom and click "My Shared Items", then select Chess FEN Visualizer, then scroll to "Update".
