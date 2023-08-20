@@ -32,7 +32,7 @@ def hook(txt, editor):
     result = re.sub(r'\[FEN\](.*?)\[\/FEN\]', fen2svg, txt, flags=re.IGNORECASE)
     return result
 
-if sys.executable.endswith('anki'):
+if sys.executable.endswith('anki') or sys.executable.endswith('anki.exe'):
     print('anki_fen_vis: executing from ANKI gui')
 
     # read config
