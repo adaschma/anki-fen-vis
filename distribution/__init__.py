@@ -32,19 +32,9 @@ def hook(txt, editor):
     result = re.sub(r'\[FEN\](.*?)\[\/FEN\]', fen2svg, txt, flags=re.IGNORECASE)
     return result
 
-if sys.executable.endswith('anki') or sys.executable.endswith('anki.exe'):
-    print('anki_fen_vis: executing from ANKI gui')
-
-    # read config
-    from aqt import mw
-    config = mw.addonManager.getConfig(__name__)
-    print(f'anki_fen_vis: config {config}')
-
-    # set hook
-    from aqt import gui_hooks
-    gui_hooks.editor_will_munge_html.append(hook)
-
-elif sys.executable.endswith('python'):
+try:
+    from aqt import mw, gui_hooks
+except ImportError:
     print('anki_fen_vis: executing from command-line')
 
     # read config
@@ -57,7 +47,12 @@ elif sys.executable.endswith('python'):
     with open(fpath_json) as fp:
         config = json.load(fp)
     print(f'config: {config}')
-
 else:
-    print('anki_fen_vis: executing ???')
+    print('anki_fen_vis: executing from ANKI gui')
 
+    # read config
+    config = mw.addonManager.getConfig(__name__)
+    print(f'anki_fen_vis: config {config}')
+
+    # set hook
+    gui_hooks.editor_will_munge_html.append(hook)
